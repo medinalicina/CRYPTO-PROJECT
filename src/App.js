@@ -14,7 +14,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Card />
         <div style={{ padding: "0 20%", minHeight: "66.5vh" }}>
           <Routes>
             <Route path="/" element={<HomePage />} />

@@ -41,12 +41,7 @@ function HomePage() {
     <div>
       <h1>dasdas</h1>
     {coinData.map((coin) => (
-      <div key={coin.id} style={{ width: '200px', height: 'auto', backgroundColor: 'purple' }}>
-        <p>{coin.name}</p>
-        <p>{coin.price}</p>
-        <p>{coin.rank}</p>
-        <p>{coin.marketCap}</p>
-      </div>
+      <Card key={coin.id} coin={coin}> </Card>
     ))}
   </div>
      )
