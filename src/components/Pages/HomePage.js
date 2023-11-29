@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react";
 import axios from "axios";
 import NewsPage from "./NewsPage";
 import Card from "../Card/Card";
+import './HomePage.css';
 function HomePage() {
   const[coinData, setCoinData] = useState([]);
 
@@ -16,7 +17,7 @@ function HomePage() {
         'tiers[0]': '1',
         orderBy: 'marketCap',
         orderDirection: 'desc',
-        limit: '50',
+        limit: '12',
         offset: '0'
       },
       headers: {
@@ -38,11 +39,13 @@ function HomePage() {
 
 
   return(
-    <div>
-      <h1>dasdas</h1>
+    <div className="main-container">
+      <h1>Top 12 Cryptocurencies</h1>
+      <div className="card-container"> 
     {coinData.map((coin) => (
       <Card key={coin.id} coin={coin}> </Card>
     ))}
+    </div>
   </div>
      )
 }

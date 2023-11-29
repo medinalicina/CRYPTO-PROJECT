@@ -1,5 +1,6 @@
 import Header from './components/Header/Header';
-import "./App.css";
+import './app.css'
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NewsPage from './components/Pages/NewsPage';
 import ExchangesPage from './components/Pages/ExchangesPage';
@@ -7,6 +8,7 @@ import Crypto from './components/Pages/Crypto';
 import LogoPage from './components/Pages/HomePage';
 import HomePage from './components/Pages/HomePage';
 import Card from './components/Card/Card';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -14,7 +16,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <div style={{ padding: "0 20%", minHeight: "66.5vh" }}>
+        
+        <div className='parent'> 
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/crypto" element={<Crypto />} />
@@ -22,6 +25,7 @@ function App() {
             <Route path="/news" element={<NewsPage />} />
           </Routes>
         </div>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
