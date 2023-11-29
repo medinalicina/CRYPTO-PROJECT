@@ -6,12 +6,15 @@ import ExchangesPage from './components/Pages/ExchangesPage';
 import Crypto from './components/Pages/Crypto';
 import LogoPage from './components/Pages/HomePage';
 import HomePage from './components/Pages/HomePage';
+import Card from './components/Card/Card';
+
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
+        <Card />
         <div style={{ padding: "0 20%", minHeight: "66.5vh" }}>
           <Routes>
             <Route path="/" element={<HomePage />} />

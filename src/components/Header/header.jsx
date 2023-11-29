@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import { useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
+ 
   return (
     <div className="header-container">
       <nav className="navbar">
