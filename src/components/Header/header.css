@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 400px;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  li {
+    list-style: none;
+    cursor: pointer;
+  }
+  
