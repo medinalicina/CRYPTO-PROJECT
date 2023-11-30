@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import NewsPage from "../News/NewsPage";
+import NewsPage from "../../Stats/News/NewsPage";
 import Card from "../../Card/Card";
 import "./HomePage.css";
 import Stats from "../../Stats/Stats";

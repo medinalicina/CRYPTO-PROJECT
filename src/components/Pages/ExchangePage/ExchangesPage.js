@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ExchangeStats from "./ExchangeStats";
+import './ExchangePage.css'
 
 function ExchangesPage() {
   const [exchanges, setExchanges] = useState([]);
@@ -25,8 +27,8 @@ function ExchangesPage() {
 
       try {
         const response = await axios.request(options);
-        setExchanges(response.data.data);
-        console.log(response.data);
+        setExchanges(response.data.data.exchanges);
+        console.log(response.data.data.exchanges);
       } catch (error) {
         console.error(error);
       }
@@ -35,8 +37,10 @@ function ExchangesPage() {
     fetchData();
   }, []);
   return (
-    <div style={{ height: "100vh" }}>
-      <h1>Exchanges</h1>
+    <div className="exchange-container">
+        {exchanges.map((exchanges)=>( 
+        <ExchangeStats key={exchanges.uuid} exchanges={exchanges}></ExchangeStats>
+      ))}
     </div>
   );
 }

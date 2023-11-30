@@ -2,7 +2,7 @@ import Header from "./components/Header/header";
 import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NewsPage from "./components/Pages/News/NewsPage";
+import NewsPage from "./components/Stats/News/NewsPage";
 import ExchangesPage from "./components/Pages/ExchangePage/ExchangesPage";
 import Crypto from "./components/Pages/Crypto/Crypto";
 import HomePage from "./components/Pages/Home/HomePage";

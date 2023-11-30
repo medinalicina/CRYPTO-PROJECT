@@ -1,0 +1,11 @@
+.stats-content{
+    background-color: #881111;
+
+    width: 100%;
+    height: 150px;
+    
+}
+.stats-content img{
+    width: 80px;
+    height: 80px;
+}

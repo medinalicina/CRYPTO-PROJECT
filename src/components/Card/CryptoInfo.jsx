@@ -19,11 +19,12 @@ function CryptoInfo({ coin }) {
         Name: {coin.name} ({coin.symbol})
       </p>
       {/* Use the formatted price */}
-      <p className="info-text">Price: {numericPrice}</p>
+    
       <p className="info-text">
         Last 24h: <span style={{ color: textColor }}>{formattedChange}</span>
       </p>
       <p className="info-text">MarketCap: {coin.marketCap}</p>
+      <p className="info-text">Price: {numericPrice}</p>
     </div>
   );
 }
