@@ -1,41 +1,59 @@
-*{
-    margin: 0;
-    padding: 0;
+/* Card.css */
+.card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: aliceblue;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px auto; /* Centrirajte karticu horizontalno */
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out; /* Dodajte tranziciju za glatko pojavljivanje */
 }
 
-.card {
-    width: 250px;
-    height: 250px;
-    background-color: aliceblue;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 10px; 
-    box-sizing: border-box;  
-    padding: 10px;
+.card:hover {
+  transform: scale(1.1); /* Povećajte veličinu karte na hover */
+}
+
+.coin-image {
+  transform: translateY(40px);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 30px; /* Promenjeno sa margin-bottom na margin-top */
+  transition: transform 0.3s ease-in-out; /* Dodajte tranziciju za glatko pojavljivanje */
+}
+
+.coin-image:hover {
+  transform: translateY(0);
+}
+
+/* Prikazivanje CryptoInfo samo kada je roditeljski .card u stanju :hover */
+.card:hover .crypto-info {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in-out; /* Dodajte CSS animaciju za pojavljivanje */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .card img {
-    width: 100px; 
-    height: 100px; 
-    border-radius: 50%;
-    margin-bottom: 10px;
+  to {
+    opacity: 1;
   }
-  
- 
-  .card .title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .card .price,
-  .card .rank {
-    font-size: 14px;
-    margin-bottom: 3px;
-  }
-  
-  .card p{
-    margin: 10px;
-  }
+}
+
+.crypto-info {
+  position: absolute; /* Postavite apsolutno pozicioniranje unutar roditeljske kartice */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.info-text {
+  font-size: 12px;
+  margin-bottom: 3px;
+}

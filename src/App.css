@@ -1,4 +1,16 @@
-.parent{
-    display: flex;
-    justify-content: center;
+body {
+  margin: 0;
+  /* background-color: #11001c; */
+
+  font-family: "Open Sans", sans-serif;
+}
+.App {
+  background-image: url("./bgc3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.parent {
+  display: flex;
+  justify-content: center;
 }

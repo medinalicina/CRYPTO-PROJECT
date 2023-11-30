@@ -1,18 +1,19 @@
+// Card.js
 import React from "react";
-import './Card.css';
+import "./Card.css";
+import CryptoInfo from "./CryptoInfo";
 
-function Card({coin}) {
-
-
-
+function Card({ coin }) {
   return (
     <div className="card">
-      <img src={coin.iconUrl}></img>
-          <div className="title">{coin.name}</div>
-          <p className="price">price: {coin.price}$</p>
-          <p className="rank">rank: {coin.rank}</p>
-        </div>
-
-  )
+      <img
+        src={coin.iconUrl}
+        alt={`${coin.name} icon`}
+        className="coin-image"
+      />
+      <CryptoInfo coin={coin} />
+    </div>
+  );
 }
- export default Card
+
+export default Card;

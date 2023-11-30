@@ -1,23 +1,58 @@
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 400px;
-    background-color: #219EBC;
-    height: 150px;
-    cursor: pointer;
-  }
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  li {
-    list-style: none;
-    cursor: pointer;
-    font-size: 24px;
-  
-  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 400px;
+  background-color: transparent;
+  height: 150px;
+  background-repeat: no-repeat;
+}
 
-  
+.logo {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  color: rgb(255, 165, 180);
+}
+
+li:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
