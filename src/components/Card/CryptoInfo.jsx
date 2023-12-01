@@ -18,7 +18,6 @@ function CryptoInfo({ coin }) {
       <p className="info-text">
         Name: {coin.name} ({coin.symbol})
       </p>
-      {/* Use the formatted price */}
     
       <p className="info-text">
         Last 24h: <span style={{ color: textColor }}>{formattedChange}</span>
