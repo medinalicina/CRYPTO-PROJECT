@@ -1,11 +1,23 @@
 .stats-content{
-    background-color: #881111;
-
+    width: 70%;
+    height: 115px;
+    background-color: rgba(249, 246, 246, 0.7);
+    backdrop-filter: blur(5px);
     width: 100%;
-    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px; 
+    align-items: center;
+    margin: 10px;
+    
+    
     
 }
 .stats-content img{
     width: 80px;
     height: 80px;
+}
+.stats-content.price{
+    font-weight: bold;
+    
 }

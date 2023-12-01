@@ -38,6 +38,7 @@ function ExchangesPage() {
   }, []);
   return (
     <div className="exchange-container">
+      <h1>Discover the dynamic universe of cryptocurrencies.</h1>
         {exchanges.map((exchanges)=>( 
         <ExchangeStats key={exchanges.uuid} exchanges={exchanges}></ExchangeStats>
       ))}
