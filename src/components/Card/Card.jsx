@@ -9,9 +9,10 @@ function Card({ coin }) {
       <img
         src={coin.iconUrl}
         alt={`${coin.name} icon`}
-        className="coin-image"
-      />
-      <CryptoInfo coin={coin} />
+        className="coin-image" />
+       <CryptoInfo coin={coin} />
+       
+
     </div>
   );
 }
