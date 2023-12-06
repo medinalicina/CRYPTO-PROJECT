@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ExchangeStats from "./ExchangeStats";
-import './ExchangePage.css'
+import "./ExchangePage.css";
 
 function ExchangesPage() {
   const [exchanges, setExchanges] = useState([]);
@@ -39,8 +39,11 @@ function ExchangesPage() {
   return (
     <div className="exchange-container">
       <h1>Discover the dynamic universe of cryptocurrencies.</h1>
-        {exchanges.map((exchanges)=>( 
-        <ExchangeStats key={exchanges.uuid} exchanges={exchanges}></ExchangeStats>
+      {exchanges.map((exchanges) => (
+        <ExchangeStats
+          key={exchanges.uuid}
+          exchanges={exchanges}
+        ></ExchangeStats>
       ))}
     </div>
   );
