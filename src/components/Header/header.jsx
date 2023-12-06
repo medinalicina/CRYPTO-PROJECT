@@ -19,7 +19,7 @@ function Header() {
         </div>
         <div className="links">
           <ul>
-            <li onClick={() => navigate("/news")}>News</li>
+            <li onClick={() => navigate("/crypto")}>Crypto</li>
           </ul>
         </div>
       </nav>
