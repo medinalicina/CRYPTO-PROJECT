@@ -23,19 +23,9 @@ function CryptoInfo({ coin }) {
         Last 24h: <span style={{ color: textColor }}>{formattedChange}</span>
       </p>
       <p className="info-text">MarketCap: {coin.marketCap}</p>
-      <p className="info-text">Price: {numericPrice}</p>
+      <p className="info-text">Price : {numericPrice}</p>
     </div>
-    <div className="crypto-info">
-    <p className="info-text">
-      Name: {coin.name} ({coin.symbol})
-    </p>
-  
-    <p className="info-text">
-      Last 24h: <span style={{ color: textColor }}>{formattedChange}</span>
-    </p>
-    <p className="info-text">MarketCap: {coin.marketCap}</p>
-    <p className="info-text">Price: {numericPrice}</p>
-  </div>
+    
   );
 }
 
