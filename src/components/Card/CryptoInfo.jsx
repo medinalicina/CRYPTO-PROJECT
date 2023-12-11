@@ -25,6 +25,7 @@ function CryptoInfo({ coin }) {
       <p className="info-text">MarketCap: {coin.marketCap}</p>
       <p className="info-text">Price : {numericPrice}</p>
     </div>
+    //komentar
     
   );
 }
